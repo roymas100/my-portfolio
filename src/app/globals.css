@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --border: #171421;
+  --lighter-text: #f9f9f9;
+  --light-text: #645f74;
+  --background: #070508;
+  --primary: #5320ff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+    --border: #171421;
+    --lighter-text: #f9f9f9;
+    --light-text: #645f74;
+    --background: #070508;
+    --primary: #5320ff;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: var(--background);
+}
+
+@layer base {
+  h2,
+  h3 {
+    color: var(--lighter-text);
+  }
+
+  p {
+    color: var(--light-text);
+  }
+
+  strong {
+    color: var(--lighter-text);
+  }
+}
+
+@layer components {
+  .picture-card {
+    transform-style: preserve-3d;
+  }
+}
+
+@layer utilities {
+  .flex-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .col-span-2 {
+    grid-column: span 2;
+  }
+
+  .area-top {
+    grid-template-areas: 'logo logo-space options options';
+
+    grid-template-columns:
+      minmax(200px, 2fr) minmax(200px, 2fr) minmax(200px, 1fr)
+      minmax(200px, 1fr);
+    grid-template-rows: 2rem;
+    justify-content: stretch;
+    align-content: stretch;
+    justify-items: stretch;
+    align-items: stretch;
+  }
+
+  .area-wide {
+    grid-template-areas:
+      'logo logo-space options'
+      'about-me content picture'
+      'projects projects projects'
+      'phrase phrase phrase';
+
+    grid-template-columns: minmax(400px, 1fr) minmax(400px, 1fr) minmax(
+        400px,
+        1fr
+      );
+    grid-template-rows: 192px 448px 192px 128px;
+  }
+
+  .area-slim {
+    grid-template-areas:
+      'logo logo-space options options'
+      'about-me about-me picture picture'
+      'content content projects projects'
+      'phrase phrase phrase phrase';
+
+    grid-template-columns:
+      minmax(200px, 2fr) minmax(200px, 2fr) minmax(200px, 1fr)
+      minmax(200px, 1fr);
+    grid-template-rows: 192px 448px 192px 128px;
+  }
+
+  .area-one-flow {
+    grid-template:
+      'logo' 192px
+      'logo-space' 192px
+      'options' 192px
+      'picture' 448px
+      'about-me' 448px
+      'content' 192px
+      'projects' 192px
+      'phrase' 128px
+      / minmax(400px, 1fr);
+  }
+
+  .logo {
+    grid-area: logo;
+  }
+
+  .logo-space {
+    grid-area: logo-space;
+  }
+
+  .options {
+    grid-area: options;
+  }
+
+  .about-me {
+    grid-area: about-me;
+  }
+
+  .picture {
+    grid-area: picture;
+  }
+
+  .content {
+    grid-area: content;
+  }
+
+  .projects {
+    grid-area: projects;
+  }
+
+  .phrase {
+    grid-area: phrase;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
