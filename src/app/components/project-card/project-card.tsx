@@ -34,11 +34,11 @@ export default function ProjectCard ({
 
   return (
     <div
+      data-testid='project-card'
       tabIndex={tabIndex}
       onKeyDownCapture={e => e.code === 'Enter' && changeAnimation()}
       className={`project-card ${flipped} 
       transition-all
-      bg-border
       hover:shadow-default has-[a:hover]:shadow-none`}
       onClick={() => changeAnimation()}
     >
@@ -48,7 +48,7 @@ export default function ProjectCard ({
         }}
         className='front-card transition-all hover:grayscale-0 hover:opacity-100 grayscale bg-cover bg-blend-screen opacity-70'
       ></div>
-      <div className='back-card group: justify-between'>
+      <div className='back-card justify-between'>
         <div className='flex-col gap-4'>
           <h6 className='font-poppins text-xl font-bold text-lighter-text'>
             {title}

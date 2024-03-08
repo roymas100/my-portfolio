@@ -133,7 +133,8 @@ body {
     transform-style: preserve-3d;
     position: relative;
 
-    width: 370px;
+    width: 100%;
+    max-width: 370px;
     min-height: 270px;
     border-radius: 0.5rem;
 
@@ -192,7 +193,7 @@ body {
     grid-column: span 2;
   }
 
-  .area-top {
+  /* .area-top {
     grid-template-areas: 'logo logo-space options options';
 
     grid-template-columns:
@@ -203,46 +204,54 @@ body {
     align-content: stretch;
     justify-items: stretch;
     align-items: stretch;
-  }
+  } */
 
   .area-wide {
     grid-template-areas:
-      'logo logo-space options'
-      'about-me content picture'
-      'projects projects projects'
-      'phrase phrase phrase';
+      'left1 top1 top2 top3 right1'
+      'left2 logo logo-space options right2'
+      'left3 about-me content picture right3'
+      'left4 projects projects projects right4'
+      'left5 phrase phrase phrase right5'
+      'left6 bottom1 bottom2 bottom3 right6';
 
-    grid-template-columns: minmax(400px, 1fr) minmax(400px, 1fr) minmax(
-        400px,
+    grid-template-columns:
+      minmax(32px, 1fr) minmax(400px, 1fr) minmax(400px, 1fr) minmax(400px, 1fr)
+      minmax(32px, 1fr);
+    grid-template-rows: 32px 192px 448px minmax(384px, 1fr) 128px minmax(
+        32px,
         1fr
       );
-    grid-template-rows: 192px 448px minmax(384px, 1fr) 128px;
   }
 
   .area-slim {
     grid-template-areas:
-      'logo logo-space options options'
-      'about-me about-me picture picture'
-      'content content projects projects'
-      'phrase phrase phrase phrase';
+      'left1 top1 top2 top3 top3 right1'
+      'left2 logo logo-space options options right2'
+      'left3 about-me about-me picture picture right3'
+      'left4 content content projects projects right4'
+      'left5 phrase phrase phrase phrase right5'
+      'left6 bottom1 bottom2 bottom3 bottom3 right6';
 
     grid-template-columns:
+      32px
       minmax(200px, 2fr) minmax(200px, 2fr) minmax(200px, 1fr)
-      minmax(200px, 1fr);
-    grid-template-rows: 192px 448px minmax(384px, 1fr) 128px;
+      minmax(200px, 1fr) 32px;
+    grid-template-rows: 32px 192px 448px minmax(384px, 1fr) 128px 32px;
   }
 
   .area-one-flow {
     grid-template:
-      'logo' 192px
-      'logo-space' 192px
-      'options' 192px
-      'picture' 448px
-      'about-me' 448px
-      'content' 192px
-      'projects' minmax(384px, 1fr)
-      'phrase' 128px
-      / minmax(400px, 1fr);
+      'left1 top1 right1' 16px
+      'left2 logo right2' 192px
+      'left3 options right3' 192px
+      'left4 picture right4' 448px
+      'left4 about-me right4' 380px
+      'left4 content right4' 600px
+      'left4 projects right4' minmax(384px, 1fr)
+      'left5 phrase right5' 128px
+      'left6 bottom1 right6' 16px
+      / 16px minmax(320px, 1fr) 16px;
   }
 
   .logo {
@@ -279,5 +288,62 @@ body {
 
   .text-balance {
     text-wrap: balance;
+  }
+
+  .top1 {
+    grid-area: top1;
+  }
+  .top2 {
+    grid-area: top2;
+  }
+  .top3 {
+    grid-area: top3;
+  }
+  .bottom1 {
+    grid-area: bottom1;
+  }
+  .bottom2 {
+    grid-area: bottom2;
+  }
+  .bottom3 {
+    grid-area: bottom3;
+  }
+
+  .left1 {
+    grid-area: left1;
+  }
+  .left2 {
+    grid-area: left2;
+  }
+  .left3 {
+    grid-area: left3;
+  }
+  .left4 {
+    grid-area: left4;
+  }
+  .left5 {
+    grid-area: left5;
+  }
+  .left6 {
+    grid-area: left6;
+  }
+
+  .right1 {
+    grid-area: right1;
+  }
+  .right2 {
+    grid-area: right2;
+  }
+  .right3 {
+    grid-area: right3;
+  }
+  .right4 {
+    grid-area: right4;
+  }
+  .right5 {
+    grid-area: right5;
+  }
+  .right6 {
+    grid-area: right6;
   }
 }

@@ -1,3 +1,11 @@
+export const highlight = {
+    name: 'chest',
+    description: 'Aplicativo móvel de área de saúde como trabalho voluntário.',
+    url: 'https://apps.apple.com/br/app/chest-pain-score-resca/id1537121484', 
+    title: 'Escore de Dor toráxica',
+    tecnologies: ['React Native', 'Styled components', 'Expo', 'Redux', 'Typescript']
+}
+
 export const projects = [
     {
         name: 'chest',
@@ -57,5 +65,6 @@ export default {
     projects,
     socials,
     titles,
-    about_me
+    about_me,
+    highlight
 }

@@ -23,7 +23,7 @@ export function middleware (request: NextRequest) {
     locale => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   )
 
-  if (pathnameHasLocale || pathname.endsWith('.png') || pathname.endsWith('.jpeg') || pathname.endsWith('.jpg')) return
+  if (pathnameHasLocale || pathname.endsWith('.png') || pathname.endsWith('.jpeg') || pathname.endsWith('.jpg') || pathname.endsWith('.pdf')) return
 
   // Redirect if there is no locale
   const locale = getLocale(request)
