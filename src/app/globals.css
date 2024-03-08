@@ -47,8 +47,138 @@ body {
 }
 
 @layer components {
+  @-webkit-keyframes rotate-card-up {
+    0% {
+      -webkit-transform: rotateY(0) scale(1);
+      transform: rotateY(0) scale(1);
+    }
+    33% {
+      -webkit-transform: rotateY(0) scale(1.1);
+      transform: rotateY(0) scale(1.1);
+    }
+    66% {
+      -webkit-transform: rotateY(-180deg) scale(1.1);
+      transform: rotateY(-180deg) scale(1.1);
+    }
+    100% {
+      -webkit-transform: rotateY(-180deg) scale(1);
+      transform: rotateY(-180deg) scale(1);
+    }
+  }
+  @keyframes rotate-card-up {
+    0% {
+      -webkit-transform: rotateY(0) scale(1);
+      transform: rotateY(0) scale(1);
+    }
+    33% {
+      -webkit-transform: rotateY(0) scale(1.1);
+      transform: rotateY(0) scale(1.1);
+    }
+    66% {
+      -webkit-transform: rotateY(-180deg) scale(1.1);
+      transform: rotateY(-180deg) scale(1.1);
+    }
+    100% {
+      -webkit-transform: rotateY(-180deg) scale(1);
+      transform: rotateY(-180deg) scale(1);
+    }
+  }
+
+  @-webkit-keyframes rotate-card-down {
+    0% {
+      -webkit-transform: rotateY(-180deg) scale(1);
+      transform: rotateY(-180deg) scale(1);
+    }
+    33% {
+      -webkit-transform: rotateY(-180deg) scale(1.1);
+      transform: rotateY(-180deg) scale(1.1);
+    }
+    66% {
+      -webkit-transform: rotateY(0) scale(1.1);
+      transform: rotateY(0) scale(1.1);
+    }
+    100% {
+      -webkit-transform: rotateY(0) scale(1);
+      transform: rotateY(0) scale(1);
+    }
+  }
+  @keyframes rotate-card-down {
+    0% {
+      -webkit-transform: rotateY(-180deg) scale(1);
+      transform: rotateY(-180deg) scale(1);
+    }
+    33% {
+      -webkit-transform: rotateY(-180deg) scale(1.1);
+      transform: rotateY(-180deg) scale(1.1);
+    }
+    66% {
+      -webkit-transform: rotateY(0) scale(1.1);
+      transform: rotateY(0) scale(1.1);
+    }
+    100% {
+      -webkit-transform: rotateY(0) scale(1);
+      transform: rotateY(0) scale(1);
+    }
+  }
+
   .picture-card {
     transform-style: preserve-3d;
+  }
+
+  .teste {
+    perspective: 1000px;
+  }
+
+  .project-card {
+    transform-style: preserve-3d;
+    position: relative;
+
+    width: 370px;
+    min-height: 270px;
+    border-radius: 0.5rem;
+
+    cursor: pointer;
+  }
+
+  .project-card-down {
+    -webkit-animation: rotate-card-down 0.8s ease both;
+    animation: rotate-card-down 0.8s ease both;
+  }
+  .project-card-up {
+    /* transform: rotateY(-180deg); */
+    -webkit-animation: rotate-card-up 0.8s ease both;
+    animation: rotate-card-up 0.8s ease both;
+  }
+
+  .front-card,
+  .back-card {
+    width: 100%;
+    height: 100%;
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    position: absolute;
+
+    border-radius: 0.5rem;
+  }
+
+  .front-card {
+    transition: filter 0.3s;
+    z-index: 20;
+  }
+
+  .back-card {
+    background-color: var(--border);
+    transform: rotateY(-180deg);
+
+    /* border: 1px solid var(--light-text); */
+
+    padding: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 }
 
@@ -86,7 +216,7 @@ body {
         400px,
         1fr
       );
-    grid-template-rows: 192px 448px 192px 128px;
+    grid-template-rows: 192px 448px minmax(384px, 1fr) 128px;
   }
 
   .area-slim {
@@ -99,7 +229,7 @@ body {
     grid-template-columns:
       minmax(200px, 2fr) minmax(200px, 2fr) minmax(200px, 1fr)
       minmax(200px, 1fr);
-    grid-template-rows: 192px 448px 192px 128px;
+    grid-template-rows: 192px 448px minmax(384px, 1fr) 128px;
   }
 
   .area-one-flow {
@@ -110,7 +240,7 @@ body {
       'picture' 448px
       'about-me' 448px
       'content' 192px
-      'projects' 192px
+      'projects' minmax(384px, 1fr)
       'phrase' 128px
       / minmax(400px, 1fr);
   }

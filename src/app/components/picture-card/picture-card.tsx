@@ -1,6 +1,6 @@
 'use client'
 
-import { memo, useEffect, useLayoutEffect, useRef } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 
 function PictureCard () {
   const myRef = useRef<HTMLDivElement | null>(null)
@@ -45,8 +45,9 @@ function PictureCard () {
 
   return (
     <div
+      data-testid='picture-card'
       ref={myRef}
-      className='picture-card p-2 bg-picture bg-contain bg-gradien from-border via-transparent to-transparent rounded-lg w-full h-full'
+      className='picture-card p-2 bg-picture bg-cover bg-gradien from-border via-transparent to-transparent rounded-lg w-full h-full'
     >
       <div className='border border-border size-full rounded-md' />
     </div>

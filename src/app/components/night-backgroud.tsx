@@ -55,7 +55,7 @@ export default function NightBackground () {
           options={{
             background: {
               color: {
-                value: '#070508'
+                value: 'var(--background)'
               }
             },
             fpsLimit: 120,
