@@ -140,6 +140,7 @@ export default async function Home ({
             {/* <div className='bg-border rounded-lg size-full'></div> */}
             {/* <div className='flex justify-center h-full w-full'> */}
             <HighlightCard
+              name={t.highlight.name}
               description={t.highlight.description}
               github='#'
               technologies={t.highlight.tecnologies}

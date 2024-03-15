@@ -1,9 +1,9 @@
 export const highlight = {
-    name: 'chest',
-    description: 'Aplicativo móvel de área de saúde como trabalho voluntário.',
-    url: 'https://apps.apple.com/br/app/chest-pain-score-resca/id1537121484', 
-    title: 'Escore de Dor toráxica',
-    tecnologies: ['React Native', 'Styled components', 'Expo', 'Redux', 'Typescript']
+    name: 'mei',
+    description: 'API para marcação de consulta de acordo com agenda previamente configurada.',
+    url: 'https://github.com/roymas100/projeto-mei', 
+    title: 'Projeto MEI',
+    tecnologies: ['Node.js', 'Prisma', 'Vistes', 'Postgresql', 'Docker', 'TDD', 'Typescript', 'Whatsapp API', 'Slite API']
 }
 
 export const projects = [

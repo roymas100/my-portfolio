@@ -1,9 +1,9 @@
 export const highlight = {
-    name: 'chest',
-    description: 'Mobile application of healthy area as a volunteer job.',
-    url: 'https://apps.apple.com/br/app/chest-pain-score-resca/id1537121484', 
-    title: 'Chest pain score',
-    tecnologies: ['React Native', 'Styled components', 'Expo', 'Redux', 'Typescript']
+    name: 'mei',
+    description: 'This is a schedule api to be implemented in a later website.',
+    url: 'https://github.com/roymas100/projeto-mei', 
+    title: 'MEI project',
+    tecnologies: ['Node.js', 'Prisma', 'Vistes', 'Postgresql', 'Docker', 'TDD', 'Typescript', 'Whatsapp API', 'Slite API']
 }
 
 export const projects = [

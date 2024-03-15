@@ -1,4 +1,5 @@
 interface HighlightCardProps {
+  name: string
   title: string
   description: string
   technologies: string[]
@@ -11,11 +12,19 @@ export default function HighlightCard ({
   description,
   github,
   technologies,
-  url
+  url,
+  name
 }: HighlightCardProps) {
+  const img_url = '/images/' + name + '.png'
+
   return (
     <div className='flex-col h-full'>
-      <div className='rounded-t-lg bg-picture h-full bg-cover' />
+      <div
+        style={{
+          backgroundImage: `linear-gradient(180deg, rgba(23,20,33, 0.24) 0, rgba(23,20,33, 0.24)  100%), url(${img_url})`
+        }}
+        className='rounded-t-lg h-full bg-cover'
+      />
       <div className='rounded-b-lg flex-col p-6 gap-6 bg-border'>
         <div className='flex-col gap-4'>
           <h6 className='font-poppins text-xl font-bold'>{title}</h6>
