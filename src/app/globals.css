@@ -193,44 +193,39 @@ body {
     grid-column: span 2;
   }
 
-  /* .area-top {
-    grid-template-areas: 'logo logo-space options options';
+  .top-grid {
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+  }
 
-    grid-template-columns:
-      minmax(200px, 2fr) minmax(200px, 2fr) minmax(200px, 1fr)
-      minmax(200px, 1fr);
-    grid-template-rows: 2rem;
-    justify-content: stretch;
-    align-content: stretch;
-    justify-items: stretch;
-    align-items: stretch;
-  } */
-
-  .area-wide {
+  .grid-area-wide {
     grid-template-areas:
       'left1 top1 top2 top3 right1'
-      'left2 logo logo-space options right2'
-      'left3 about-me content picture right3'
-      'left4 projects projects projects right4'
-      'left5 phrase phrase phrase right5'
+      'left2 subgrid-area subgrid-area subgrid-area right2'
+      'left3 subgrid-area subgrid-area subgrid-area right3'
+      'left4 subgrid-area subgrid-area subgrid-area right4'
+      'left5 subgrid-area subgrid-area subgrid-area right5'
       'left6 bottom1 bottom2 bottom3 right6';
 
     grid-template-columns:
-      minmax(32px, 1fr) minmax(400px, 1fr) minmax(400px, 1fr) minmax(400px, 1fr)
-      minmax(32px, 1fr);
-    grid-template-rows: 32px 192px 448px minmax(384px, 1fr) 128px minmax(
+      1fr minmax(400px, 426.66px) minmax(400px, 426.66px) minmax(
+        400px,
+        426.66px
+      )
+      1fr;
+    grid-template-rows: 32px 192px 600px minmax(384px, 1fr) 128px minmax(
         32px,
         1fr
       );
   }
 
-  .area-slim {
+  .grid-area-slim {
     grid-template-areas:
       'left1 top1 top2 top3 top3 right1'
-      'left2 logo logo-space options options right2'
-      'left3 about-me about-me picture picture right3'
-      'left4 content content projects projects right4'
-      'left5 phrase phrase phrase phrase right5'
+      'left2 subgrid-area subgrid-area subgrid-area subgrid-area right2'
+      'left3 subgrid-area subgrid-area subgrid-area subgrid-area right3'
+      'left4 subgrid-area subgrid-area subgrid-area subgrid-area right4'
+      'left5 subgrid-area subgrid-area subgrid-area subgrid-area right5'
       'left6 bottom1 bottom2 bottom3 bottom3 right6';
 
     grid-template-columns:
@@ -240,18 +235,59 @@ body {
     grid-template-rows: 32px 192px 448px minmax(384px, 1fr) 128px 32px;
   }
 
-  .area-one-flow {
+  .grid-area-one-flow {
     grid-template:
       'left1 top1 right1' 16px
-      'left2 logo right2' 192px
-      'left3 options right3' 192px
-      'left4 picture right4' 448px
-      'left4 about-me right4' 380px
-      'left4 content right4' 600px
-      'left4 projects right4' minmax(384px, 1fr)
-      'left5 phrase right5' 128px
+      'left2 subgrid-area right2' 192px
+      'left3 subgrid-area right3' 192px
+      'left4 subgrid-area right4' 448px
+      'left4 subgrid-area right4' 380px
+      'left4 subgrid-area right4' 600px
+      'left4 subgrid-area right4' minmax(384px, 1fr)
+      'left5 subgrid-area right5' 128px
       'left6 bottom1 right6' 16px
       / 16px minmax(320px, 1fr) 16px;
+  }
+
+  .area-wide {
+    grid-template-areas:
+      'logo logo-space options'
+      'about-me content picture'
+      'projects projects projects'
+      'phrase phrase phrase'
+      'bottom1 bottom2 bottom3';
+
+    grid-template-columns: minmax(400px, 1fr) minmax(400px, 1fr) minmax(
+        400px,
+        1fr
+      );
+    grid-template-rows: 192px 600px minmax(384px, 1fr) 128px;
+  }
+
+  .area-slim {
+    grid-template-areas:
+      'logo logo-space options options'
+      'about-me about-me picture picture'
+      'content content projects projects'
+      'phrase phrase phrase phrase'
+      'bottom1 bottom2 bottom3 bottom3';
+
+    grid-template-columns:
+      minmax(200px, 2fr) minmax(200px, 2fr) minmax(200px, 1fr)
+      minmax(200px, 1fr);
+    grid-template-rows: 192px 448px minmax(384px, 1fr) 128px;
+  }
+
+  .area-one-flow {
+    grid-template:
+      'logo' 192px
+      'options' 192px
+      'picture' 448px
+      'about-me' 380px
+      'content' 600px
+      'projects' minmax(384px, 1fr)
+      'phrase' 128px
+      / minmax(320px, 1fr);
   }
 
   .logo {
@@ -288,6 +324,10 @@ body {
 
   .text-balance {
     text-wrap: balance;
+  }
+
+  .subgrid-area {
+    grid-area: subgrid-area;
   }
 
   .top1 {

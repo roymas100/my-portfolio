@@ -17,7 +17,7 @@ const config: Config = {
       },
       boxShadow: {
         'default': '0 0px 24px 2px rgb(249, 249, 249, 0.3)',
-        'button': '0 0px 6px 1px rgb(249, 249, 249, 0.3)'
+        'button': '0 0px 6px 1px rgba(249, 249, 249, 0.3)'
       },
       fontFamily: {
         poppins: ['var(--font-poppins)', 'sans-serif'],
