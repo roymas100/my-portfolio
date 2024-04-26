@@ -19,6 +19,11 @@ export default async function Home ({
 }) {
   const t = await getDictionary(lang)
 
+  enum Resume {
+    'en-US' = '/ENG - Amir Andrade - Full stack developer.pdf',
+    'pt-BR' = '/Amir Andrade - Fullstack developer.pdf'
+  }
+
   return (
     <main className='flex min-h-screen flex-col xl:items-center justify-between'>
       <NightBackground />
@@ -122,7 +127,7 @@ export default async function Home ({
               </h3>
               <a
                 target='_blank'
-                href='/Amir Andrade - Fullstack developer.pdf'
+                href={Resume[lang]}
                 className='hover:shadow-button transition-shadow flex bg-primary gap-4 px-4 py-2 rounded-lg text-lighter-text '
               >
                 <Download size={20} />
@@ -137,8 +142,6 @@ export default async function Home ({
               {t.titles.highlight}
             </div>
 
-            {/* <div className='bg-border rounded-lg size-full'></div> */}
-            {/* <div className='flex justify-center h-full w-full'> */}
             <HighlightCard
               name={t.highlight.name}
               description={t.highlight.description}
@@ -147,7 +150,6 @@ export default async function Home ({
               title={t.highlight.title}
               url={t.highlight.url}
             />
-            {/* </div> */}
           </div>
           <div className='picture p-6 border border-border text-yellow-50 '>
             <PictureCard />
