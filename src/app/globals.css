@@ -200,12 +200,12 @@ body {
 
   .grid-area-wide {
     grid-template-areas:
-      'left1 top1 top2 top3 right1'
-      'left2 subgrid-area subgrid-area subgrid-area right2'
-      'left3 subgrid-area subgrid-area subgrid-area right3'
-      'left4 subgrid-area subgrid-area subgrid-area right4'
-      'left5 subgrid-area subgrid-area subgrid-area right5'
-      'left6 bottom1 bottom2 bottom3 right6';
+      "left1 top1 top2 top3 right1"
+      "left2 subgrid-area subgrid-area subgrid-area right2"
+      "left3 subgrid-area subgrid-area subgrid-area right3"
+      "left4 subgrid-area subgrid-area subgrid-area right4"
+      "left5 subgrid-area subgrid-area subgrid-area right5"
+      "left6 bottom1 bottom2 bottom3 right6";
 
     grid-template-columns:
       1fr minmax(400px, 426.66px) minmax(400px, 426.66px) minmax(
@@ -221,12 +221,12 @@ body {
 
   .grid-area-slim {
     grid-template-areas:
-      'left1 top1 top2 top3 top3 right1'
-      'left2 subgrid-area subgrid-area subgrid-area subgrid-area right2'
-      'left3 subgrid-area subgrid-area subgrid-area subgrid-area right3'
-      'left4 subgrid-area subgrid-area subgrid-area subgrid-area right4'
-      'left5 subgrid-area subgrid-area subgrid-area subgrid-area right5'
-      'left6 bottom1 bottom2 bottom3 bottom3 right6';
+      "left1 top1 top2 top3 top3 right1"
+      "left2 subgrid-area subgrid-area subgrid-area subgrid-area right2"
+      "left3 subgrid-area subgrid-area subgrid-area subgrid-area right3"
+      "left4 subgrid-area subgrid-area subgrid-area subgrid-area right4"
+      "left5 subgrid-area subgrid-area subgrid-area subgrid-area right5"
+      "left6 bottom1 bottom2 bottom3 bottom3 right6";
 
     grid-template-columns:
       32px
@@ -237,25 +237,25 @@ body {
 
   .grid-area-one-flow {
     grid-template:
-      'left1 top1 right1' 16px
-      'left2 subgrid-area right2' 192px
-      'left3 subgrid-area right3' 192px
-      'left4 subgrid-area right4' 448px
-      'left4 subgrid-area right4' 380px
-      'left4 subgrid-area right4' 600px
-      'left4 subgrid-area right4' minmax(384px, 1fr)
-      'left5 subgrid-area right5' 128px
-      'left6 bottom1 right6' 16px
+      "left1 top1 right1" 16px
+      "left2 subgrid-area right2" 192px
+      "left3 subgrid-area right3" 192px
+      "left4 subgrid-area right4" 448px
+      "left4 subgrid-area right4" 380px
+      "left4 subgrid-area right4" 600px
+      "left4 subgrid-area right4" minmax(384px, 1fr)
+      "left5 subgrid-area right5" 128px
+      "left6 bottom1 right6" 16px
       / 16px minmax(320px, 1fr) 16px;
   }
 
   .area-wide {
     grid-template-areas:
-      'logo logo-space options'
-      'about-me content picture'
-      'projects projects projects'
-      'phrase phrase phrase'
-      'bottom1 bottom2 bottom3';
+      "logo logo-space options"
+      "about-me content picture"
+      "projects projects projects"
+      "phrase phrase phrase"
+      "bottom1 bottom2 bottom3";
 
     grid-template-columns: minmax(400px, 1fr) minmax(400px, 1fr) minmax(
         400px,
@@ -266,11 +266,11 @@ body {
 
   .area-slim {
     grid-template-areas:
-      'logo logo-space options options'
-      'about-me about-me picture picture'
-      'content content projects projects'
-      'phrase phrase phrase phrase'
-      'bottom1 bottom2 bottom3 bottom3';
+      "logo logo-space options options"
+      "about-me about-me picture picture"
+      "content content projects projects"
+      "phrase phrase phrase phrase"
+      "bottom1 bottom2 bottom3 bottom3";
 
     grid-template-columns:
       minmax(200px, 2fr) minmax(200px, 2fr) minmax(200px, 1fr)
@@ -280,13 +280,13 @@ body {
 
   .area-one-flow {
     grid-template:
-      'logo' 192px
-      'options' 192px
-      'picture' 448px
-      'about-me' 380px
-      'content' 600px
-      'projects' minmax(384px, 1fr)
-      'phrase' 128px
+      "logo" 192px
+      "options" 192px
+      "picture" 448px
+      "about-me" 380px
+      "content" 600px
+      "projects" minmax(384px, 1fr)
+      "phrase" 128px
       / minmax(320px, 1fr);
   }
 
